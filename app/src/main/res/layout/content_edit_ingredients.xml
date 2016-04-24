@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".EditIngredientsActivity"
+    tools:showIn="@layout/activity_edit_ingredients">
+
+    <TextView
+        android:id="@+id/edit_ingredients_product_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product"
+        style="@style/Base.TextAppearance.AppCompat.Large"/>
+    <TextView
+        android:id="@+id/edit_ingredients_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_ingredients_product_headline"
+        android:text="product"
+        style="@style/Base.TextAppearance.AppCompat.Large"/>
+    <TextView
+        android:id="@+id/edit_ingredients_username_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Username"
+        android:textColor="@android:color/black"
+        style="@style/Base.TextAppearance.AppCompat.Medium"/>
+    <TextView
+        android:id="@+id/edit_ingredients_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/edit_ingredients_username_headline"
+        android:text="username"
+        style="@style/Base.TextAppearance.AppCompat.Medium"/>
+    <ScrollView
+        android:id="@+id/edit_ingredients_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_ingredients_product">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                    android:id="@+id/edit_ingredients_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            <EditText
+                android:id="@+id/addIngredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_ingredients_scroll"
+                android:hint="Add new ingredients here"
+                android:inputType="textCapWords"
+                android:imeOptions="actionGo"/>
+            <Button
+                android:id="@+id/add_new_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Add new"
+                android:layout_below="@+id/addIngredient"
+                android:layout_toLeftOf="@+id/add_to_product_button" />
+            <Button
+                android:id="@+id/add_to_product_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Add to product"
+                android:layout_below="@+id/addIngredient"
+                android:layout_alignParentRight="true"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

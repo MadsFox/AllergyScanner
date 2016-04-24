@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dk.ruc.madssk.barcodedetectiontest">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.vision"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProductViewActivity"
+            android:label="@string/title_activity_product_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LogInActivity"
+            android:label="@string/title_activity_log_in"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EANSearchActivity"
+            android:label="@string/title_activity_ean_search"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditProductActivity"
+            android:label="@string/title_activity_edit_product"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditIngredientsActivity"
+            android:label="@string/title_activity_edit_ingredients"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
